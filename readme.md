@@ -49,7 +49,7 @@ platformBrowserDynamic().bootstrapModule(AppModule, {
 })
 ```
 `This allows us to tell the compiler how to translate the template texts for a particular language while compiling the app`
-### /src/app/app.module`
+### /src/app/app.module
 ```
 { provide: LOCALE_ID, useValue: window.navigator.language }
 ```
