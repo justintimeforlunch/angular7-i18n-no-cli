@@ -19,7 +19,7 @@
 
 ## Pieces to focus on 
 
-######/config/webpack.dev.js######
+### config/webpack.dev.js
 ```
 new AngularCompilerPlugin({
       mainPath: 'src/main.ts',
@@ -34,7 +34,7 @@ new AngularCompilerPlugin({
 ```
 `This allows webpack to run the ng-xi18n command without the cli to create the initial messages.xlf file in /src/i18n/`
 
-######/src/main.ts######
+### /src/main.ts
 ```
 const translations =
   window.navigator.language !== 'en-US'
@@ -49,7 +49,7 @@ platformBrowserDynamic().bootstrapModule(AppModule, {
 })
 ```
 `This allows us to tell the compiler how to translate the template texts for a particular language while compiling the app`
-######/src/app/app.module`######
+### /src/app/app.module`
 ```
 { provide: LOCALE_ID, useValue: window.navigator.language }
 ```
