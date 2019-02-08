@@ -55,3 +55,13 @@ platformBrowserDynamic().bootstrapModule(AppModule, {
 ```
 `This allows us to define the LOCALE_ID provider with whatever locale we want to use`
 
+###  Notes on manually selecting a language
+*  Drop down exists on front page near the user profile info
+    * English (sets cookie to en*  and reloads)
+    * German (sets cookie to de*  and reloads)
+    * Japanese (sets cookie to ja*  and reloads)
+    * Browser Default (clears cookie, reloads with broswer selected language ) 
+    
+Check with Abiomed on support for de-de vs de, and en-US vs en. (Do we support UK locales?)
+
+
