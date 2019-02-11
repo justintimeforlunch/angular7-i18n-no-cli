@@ -37,6 +37,10 @@ module.exports = {
       {
         test: /\.ts$/,
         loader: ['ts-loader', 'angular2-template-loader']
+      },
+      {
+        test: /\.xlf$/,
+        use: 'raw-loader'
       }
     ]
   },

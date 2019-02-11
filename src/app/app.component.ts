@@ -1,23 +1,25 @@
-import { Component, OnInit } from '@angular/core'
-import { CounterService } from './service/CounterService'
-
+import { Component } from '@angular/core'
+import { setCookie, clearCookie } from '../cookies';
 @Component({
   selector: 'main-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   name: string
   count: number
 
-  public constructor(private counterService: CounterService) {
+  public constructor() {
     this.name = 'Angular'
     this.count = 0
   }
+  onClickSetCookie(value: any) {
+    setCookie('locale', value, 1);
+    location.reload();
+  }
 
-  ngOnInit(): void {
-    this.counterService.getCount().subscribe((data) => {
-      this.count = data.count
-    })
+  onClickClearCookie() {
+    clearCookie('locale');
+    location.reload();
   }
 }

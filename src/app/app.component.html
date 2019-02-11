@@ -1,2 +1,8 @@
 <h1>{{name}} App</h1>
 <p i18n="@@introductionHelloWorld">Hello World!</p>
+<p i18n="@@introductionParagraph3">This is another paragraph!</p>
+<p i18n>This is another paragraph!</p>
+<button (click)="onClickSetCookie('en')">Click to set locale to en</button>
+<button (click)="onClickSetCookie('fr')">Click to set locale to fr</button>
+<button (click)="onClickSetCookie('fr-CA')">Click to set locale to fr-CA</button>
+<button (click)="onClickClearCookie()">Click to clear cookies</button>
