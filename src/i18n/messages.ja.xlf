@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="fr-CA">
+  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="ja">
     <body>
       <trans-unit id="introductionHelloWorld" datatype="html">
         <source>Hello Srini!</source>
-        <target state="new">Hello World!</target>
+        <target state="final">こんにちはSrini！</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">2</context>
@@ -12,7 +12,7 @@
       </trans-unit>
       <trans-unit id="introductionEoin" datatype="html">
         <source>Goodbye Eoin!</source>
-        <target state="new">Hello Eoin!</target>
+        <target state="final">こんにちはEoin！</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">3</context>
@@ -20,7 +20,7 @@
       </trans-unit>
       <trans-unit id="introductionJustin" datatype="html">
         <source>Hello Justin!</source>
-        <target state="new">Hello Justin!</target>
+        <target state="final">こんにちはジャスティン!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">4</context>
@@ -36,7 +36,7 @@
       </trans-unit>
       <trans-unit id="testingId" datatype="html">
         <source>Hello2 <x id="INTERPOLATION" equiv-text="{{name}}"/>!</source>
-        <target state="new">Hello <x id="INTERPOLATION" equiv-text="{{name}}"/>!</target>
+        <target state="translated">こんにちは <x id="INTERPOLATION" equiv-text="{{name}}"/>!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.ts</context>
           <context context-type="linenumber">1</context>
@@ -44,7 +44,7 @@
       </trans-unit>
       <trans-unit id="goodbyeId" datatype="html">
         <source>Goodbye <x id="INTERPOLATION" equiv-text="{{name2}}"/>!</source>
-        <target state="new">Goodbye <x id="INTERPOLATION" equiv-text="{{name2}}"/>!</target>
+        <target state="final">さようなら <x id="INTERPOLATION" equiv-text="{{name2}}"/>!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.ts</context>
           <context context-type="linenumber">1</context>

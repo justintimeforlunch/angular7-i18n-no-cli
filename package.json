@@ -2,9 +2,11 @@
   "name": "angular7-i18n-no-cli",
   "version": "0.1.0",
   "scripts": {
-    "build": "webpack --config config/webpack.dev.js",
+    "build": "webpack --config config/webpack.dev.js && npm run preextract && npm run postextract",
     "build:watch": "webpack --watch --config config/webpack.dev.js",
     "build:prod": "webpack --config config/webpack.prod.js",
+    "preextract": "ngx-extractor -i src/**/*.ts -f xlf -o src/i18n/messages.xlf",
+    "postextract": "xliffmerge --profile xliffmerge.conf.json",
     "server": "node ./config/dev-server.js",
     "test:unit": "karma start karma.conf.js",
     "test:all": "karma start karma.conf.js **/*.spec.ts",
@@ -20,6 +22,7 @@
     "@angular/core": "7.0.0",
     "@angular/platform-browser": "7.0.0",
     "@angular/platform-browser-dynamic": "7.0.0",
+    "@ngx-translate/i18n-polyfill": "^1.0.0",
     "core-js": "2.5.5",
     "rxjs": "6.1.0",
     "zone.js": "0.8.26"
@@ -39,6 +42,7 @@
     "karma-jasmine": "1.1.2",
     "karma-mocha-reporter": "2.2.5",
     "karma-webpack": "3.0.0",
+    "ngx-i18nsupport": "^0.17.1",
     "node-sass": "4.9.0",
     "prettier": "1.12.1",
     "raw-loader": "^1.0.0",

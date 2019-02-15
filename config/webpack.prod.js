@@ -1,6 +1,6 @@
-const webpack = require('webpack');
-const path = require("path");
-const {AngularCompilerPlugin} = require('@ngtools/webpack')
+const webpack = require('webpack')
+const path = require('path')
+const { AngularCompilerPlugin } = require('@ngtools/webpack')
 const PurifyPlugin = require('@angular-devkit/build-optimizer').PurifyPlugin
 
 module.exports = {
@@ -15,9 +15,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: [
-      '.js', '.ts'
-    ]
+    extensions: ['.js', '.ts']
   },
 
   optimization: {
@@ -49,6 +47,10 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ['to-string-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.xlf$/,
+        use: 'raw-loader'
       }
     ]
   },
@@ -60,12 +62,18 @@ module.exports = {
       {}
     ),
     new webpack.DefinePlugin({
-      ENV_PRODUCTION: true,
+      ENV_PRODUCTION: true
     }),
     new AngularCompilerPlugin({
-      tsConfigPath: './tsconfig.json',
-      mainPath: path.resolve('src/main.ts')
+      mainPath: 'src/main.ts',
+      i18nOutFile: path.join('src', 'i18n', 'messages.xlf'),
+      i18nOutFormat: 'xlf',
+      locale: 'en',
+      sourceMap: true,
+      tsConfigPath: 'tsconfig.json',
+      skipCodeGeneration: false,
+      compilerOptions: {}
     }),
     new PurifyPlugin()
   ]
-};
+}
